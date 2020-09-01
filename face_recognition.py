@@ -3,7 +3,7 @@ import numpy as np
 import os
 
 
-##-------------------------------------------------KNN ALGO------------------------
+#KNN
 def distance(x,point):
 	d = np.sqrt(sum((x-point)**2))
 	return d
@@ -33,14 +33,7 @@ def knn(X,Y,point,k=5):
 
 	return pred
 
-
-
-#-----------------------------------------------------------------------------------------------
-
-
-
-
-#camera
+#Camera
 cap = cv2.VideoCapture(0)
 face_cascade = cv2.CascadeClassifier("haarcascade_frontalface_alt.xml")
 
@@ -69,7 +62,7 @@ Y = np.concatenate(labels,axis=0)
 # print(face_dataset.shape)
 # print(face_labels.shape)
 
-#testing 
+#Testing 
 
 while True:
 	ret,frame = cap.read()
